@@ -31,4 +31,22 @@ var longestCommonPrefix = function (strs) {
 		}
 	}
 	return prefixStr.slice(0, -1);
+	//下面为解法二
+	// for (let i = 0; i <= strsLen; i++) {
+	// 	prefixStr = sortStr.slice(0, i + 1);
+	// 	flag = strs.find((item) => {
+	// 		if (!item.startsWith(prefixStr)) {
+	// 			return true;
+	// 		} else {
+	// 			return false;
+	// 		}
+	// 	})
+	// 	if (flag) {
+	// 		return prefixStr.slice(0, -1);
+	// 	} else {
+	// 		if (i === strsLen) {
+	// 			return prefixStr;
+	// 		}
+	// 	}
+	// }
 };
